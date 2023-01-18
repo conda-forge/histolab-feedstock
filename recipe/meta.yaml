@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python
+    - poetry
   run:
     - numpy >=1.18.4,<1.23.1
     - openslide-python <1.2.1
