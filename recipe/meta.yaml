@@ -1,5 +1,5 @@
 {% set name = "histolab" %}
-{% set version = "0.5.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/histolab-{{ version }}.tar.gz
-  sha256: 7bbcfbc2c61a44ff38e0f4e618bb8e172516e793326beba23f793845750b01fb
+  sha256: c0f6a6d0381f0ca056f524e3b8217b0a8304ea79a0cdc88f76a39b1bf7531031
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -19,13 +19,12 @@ requirements:
     - pip
     - python
   run:
-    - numpy >=1.18.4,<1.22.4
-    - openslide-python
-    - pillow >=8.4.0,<9.0.0
-    - python
-    - scikit-image >=0.19.0,<0.19.3
-    - scipy >=1.5.0,<1.8.1
-    - typing-extensions
+    - numpy >=1.23.2,<=1.24.4
+    - openslide-python >=1.3.1,<1.3.2
+    - pillow >=9.1.0,<11.0.0
+    - python >=3.8,<3.12
+    - scikit-image >=0.19.0,<0.19.4
+    - scipy >=1.5.0,<1.10.1
 
 test:
   imports:
